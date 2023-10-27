@@ -6,14 +6,9 @@ import http from 'http';
 import recipes from "./routes/recipes";
 import cors from 'cors'
 import passport from "./auth/passport";
-import passportJwt from "passport-jwt";
-import MockedUser from "./model/const/mocked-user";
 import auth from "./routes/auth";
 
 const app = express();
-
-const JwtStrategy = passportJwt.Strategy;
-const ExtractJwt = passportJwt.ExtractJwt;
 
 app.use(logger('dev'));
 app.use(cors());
