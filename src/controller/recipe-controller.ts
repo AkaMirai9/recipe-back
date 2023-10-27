@@ -62,8 +62,8 @@ class RecipeController {
             const error = e as Error;
             switch (error.message) {
                 case "not recipe":
-                    res.status(404).json({
-                        status: 404,
+                    res.status(400).json({
+                        status: 400,
                         message: "la recette envoyée n'est pas dans le format attendu",
                         data: []
                     })
@@ -99,8 +99,8 @@ class RecipeController {
                     })
                     break;
                 case "Id not a number" :
-                    res.status(404).json({
-                        status: 404,
+                    res.status(400).json({
+                        status: 400,
                         message: "L'id envoyé n'est pas dans le format attendu",
                         data: []
                     })
@@ -134,15 +134,15 @@ class RecipeController {
                     })
                     break;
                 case "not recipe":
-                    res.status(404).json({
-                        status: 404,
+                    res.status(400).json({
+                        status: 400,
                         message: "la recette envoyée n'est pas dans le format attendu",
                         data: []
                     })
                     break;
                 case "Id not a number" :
-                    res.status(404).json({
-                        status: 404,
+                    res.status(400).json({
+                        status: 400,
                         message: "L'id envoyé n'est pas dans le format attendu",
                         data: []
                     })
@@ -179,8 +179,8 @@ class RecipeController {
                     })
                     break;
                 case "Id not a number" :
-                    res.status(404).json({
-                        status: 404,
+                    res.status(400).json({
+                        status: 400,
                         message: "L'id envoyé n'est pas dans le format attendu",
                         data: []
                     })
